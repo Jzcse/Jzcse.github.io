@@ -1,0 +1,226 @@
++++
+date = '2025-07-23T15:39:39+08:00'
+draft = true
+title = '【教程】Hugo + Github免费搭建博客'
++++
+
+# 【教程】Hugo + Github免费搭建博客
+
+## Hugo博客搭建
+
+### 下载Hugo
+
+**Hugo官方网站** [点我跳转](https://gohugo.io/)
+
+<img src='home.png' width='600px' />
+
+点击导航栏Github跳转到Hugo的Github开源仓库，或者直接[点击此处跳转](https://github.com/gohugoio/hugo)
+
+<img src='repo.png' width='600px' />
+
+点击`Tags`选择合适版本后下载对应系统的压缩包，本教程以编写时最新版本0.148.1为例，下载的包名为[hugo_extended_0.148.1_windows-amd64.zip](https://github.com/gohugoio/hugo/releases/download/v0.148.1/hugo_extended_0.148.1_windows-amd64.zip)
+
+解压后得到如图所示文件
+
+<img src='files.png' width='600px' />
+
+这样，我们的Hugo就下载好了！
+
+### 启动Hugo
+
+在Hugo目录下启动命令提示符/Powershell，执行以下命令
+
+```bash
+./hugo.exe new site <Your Folder Name>
+```
+
+这会在目录下创建一个文件夹，里面存放了你的博客网站的一些配置与文件，另外，在命令提示符中还出现了让我们感兴趣的步骤，通过这些步骤，我们就可以完成自己的博客页搭建了！
+
+<img src='steps.png' width='600px' />
+
+### 下载与安装主题
+
+如果你迫不及待的想要看一看自己的网站，我们直接跳到第5步，使用
+
+```bash
+cd <Your Folder Name>
+../hugo.exe server --buildDrafts
+```
+
+你会看到如下结果
+
+<img src='output.png' width='600px' />
+
+熟悉前端开发的一定对`http://localhost:1313`不陌生，直接在浏览器中打开这个网址就可以看到我们的网站啦！然而，不出意外，我们看到的都是**Page Not Found** 字样，不要怕，这是是因为我们还没有安装主题！让我们回到第2步。
+
+跳转到第二步的网页，或者在Hugo官网导航栏点击Themes。 [点此跳转](https://themes.gohugo.io/)
+
+<img src='themes.png' width='600'>
+
+选择你喜欢的主题进行下载并解压到`<Your Folder Name>/themes`下。这里我们使用stack主题为例。
+
+接下来，第3步，Hugo要求我们更改`hugo.toml`配置文件，在里面添加`theme`属性，其值为主题名称（即对应主题的文件夹名称）。
+
+`themes`下我的主题文件夹名为`stack`，所以我们在`hugo.toml`里添加一行配置。
+
+```toml
+theme = "stack"
+```
+
+全部完成后，让我们再一次使用第5步，打开我们的网站，就会发现我们的网页有了一些内容！
+
+<img src='page.png' width="600">
+
+### 写我的第一篇博客
+
+我们的网站已经初具雏形，是时候写一篇文章试试手啦！
+
+按照第4步，使用如下命令
+
+```bash
+../hugo.exe new content <SECTIONNAME>\<FILENAME>.<FORMAT>
+```
+
+这里为演示，我创建了`post/my-first-post.md`，hugo会在`<Your Folder Name>`下建立新的文件，如你所写，我们可以在文件资源管理器中找到并对其做一些修改。
+
+最后，让我们再次运行第5步，看一看最终的效果怎么样吧！
+
+<img src="result.png" width="600">
+
+<img src="result-inner.png" width="600">
+
+可以看到，我们已经添加了一条新的博客，并且可以阅读其详细内容啦！
+
+## 主题配置
+
+有些朋友可能会问，为什么我的页面看起来那么草率，一点也不华丽。别急，因为我们没告诉它要长什么样子，它索性就什么也不展示。那要如何告诉主题展示其他的控件呢？还记得我们配置文件嘛，我们需要更改配置文件来告诉主题。我们还是以`stack`主题为例。
+
+关于`Hugo`支持哪些配置以及配置的最全解释，可以参阅`Hugo`的`config`文档，[点此跳转](https://gohugo.io/documentation/)
+
+幸运的是，`stack`的作者在源码文件夹里为我们提供了网站demo，其中包含作者已经准备好的配置文件，问哦们可以直接拿来用。
+
+值得注意的是，作者使用的是`yaml`格式的配置文件，而我们使用的是`toml`格式，我们需要对其进行转换。因为`Hugo`支持多种配置文件格式，直接将作者使用的替换掉我们的并做一些修改也是可以的。
+
+这里选用第二种方式。部分配置如下（为避免出现不必要的问题，请不要直接复制粘贴这里的代码）：
+
+```yaml
+baseurl: https://example.com/
+languageCode: en-us
+theme: stack
+title: Example Site
+copyright: Example Person
+
+# Theme i18n support
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+DefaultContentLanguage: en
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage: false
+
+languages:
+    en:
+        languageName: English
+        title: Example Site
+        weight: 1
+        params:
+            sidebar:
+                subtitle: Example description
+    zh-cn:
+        languageName: 中文
+        title: 演示站点
+        weight: 2
+        params:
+            sidebar:
+                subtitle: 演示说明
+pagination:
+    pagerSize: 3
+
+### Custom menu
+### See https://stack.jimmycai.com/config/menu
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
+menu:
+    main: []
+
+    social:
+        - identifier: github
+          name: GitHub
+          url: https://github.com/CaiJimmy/hugo-theme-stack
+          params:
+              icon: brand-github
+
+        - identifier: twitter
+          name: Twitter
+          url: https://twitter.com
+          params:
+              icon: brand-twitter
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
+markup:
+    goldmark:
+        extensions:
+            passthrough:
+                enable: true
+                delimiters:
+                    block:
+                        - - \[
+                          - \]
+                        - - $$
+                          - $$
+                    inline:
+                        - - \(
+                          - \)
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: true
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
+    highlight:
+        noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4
+
+```
+
+这里选择几个解释一下，关于其他的更复杂的配置可以在将来有需要时查看文档进行进一步设置。
+
+`title`  网站标题
+
+`copyright` 版权标识
+
+`DefaultContentLanguage` 网站默认语言，注意，若使用简体中文`zh-cn`需要将`hasCJKLanguage`配置为`true`
+
+ `pagerSize` 每页展示的文章数量
+
+`social` 社交快捷标识
+
+替换好后，我们看一看新的界面。这时我们的页面是不是就不像之前那么单调了呢！
+
+## Github常规部署
+
+经过上面的步骤，我们已经有了自己的博客网站，但是这些页面只能在本地查看，能不能分享在网络上，让其他人也可以看到自己的博客呢？答案是肯定的！我们可以借助Github的静态网页托管进行。
+
+使用命令
+
+```bash
+..\hugo.exe -D
+```
+
+`hugo`会自动“编译”当前的所有东西，并将结果输出到`public`路径下，我们只需要将该路径下的所有文件上传到Github仓库中，使用其免费的静态界面部署即可。注意：记得更改配置文件中的`baseUrl`哦！
+
