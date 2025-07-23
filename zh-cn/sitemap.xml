@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jzcse.github.io/</loc>
-    <lastmod>2025-07-23T12:55:50+08:00</lastmod>
+    <lastmod>2025-07-23T15:39:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +13,22 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://jzcse.github.io/"
+                />
+  </url><url>
+    <loc>https://jzcse.github.io/p/%E6%95%99%E7%A8%8Bhugo--github%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2025-07-23T15:39:39+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/post/</loc>
+    <lastmod>2025-07-23T15:39:39+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jzcse.github.io/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jzcse.github.io/post/"
                 />
   </url><url>
     <loc>https://jzcse.github.io/p/my-first-post/</loc>
@@ -26,19 +42,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://jzcse.github.io/p/my-first-post/"
-                />
-  </url><url>
-    <loc>https://jzcse.github.io/post/</loc>
-    <lastmod>2025-07-23T12:55:50+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jzcse.github.io/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://jzcse.github.io/post/"
                 />
   </url><url>
     <loc>https://jzcse.github.io/page/</loc>
