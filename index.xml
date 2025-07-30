@@ -6,26 +6,25 @@
         <description>Recent content on 超超的博客站</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>超超-Jackson</copyright>
-        <lastBuildDate>Wed, 23 Jul 2025 15:39:39 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>超超-Jackson</copyright><atom:link href="https://jzcse.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【教程】Hugo &#43; Github免费搭建博客</title>
         <link>https://jzcse.github.io/p/%E6%95%99%E7%A8%8Bhugo--github%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Wed, 23 Jul 2025 15:39:39 +0800</pubDate>
         
         <guid>https://jzcse.github.io/p/%E6%95%99%E7%A8%8Bhugo--github%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
-        <description>&lt;h1 id=&#34;教程hugo--github免费搭建博客&#34;&gt;【教程】Hugo + Github免费搭建博客
+        <description>&lt;img src="https://jzcse.github.io/p/%E6%95%99%E7%A8%8Bhugo--github%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/img/cover.svg" alt="Featured image of post 【教程】Hugo &#43; Github免费搭建博客" /&gt;&lt;h1 id=&#34;教程hugo--github免费搭建博客&#34;&gt;【教程】Hugo + Github免费搭建博客
 &lt;/h1&gt;&lt;h2 id=&#34;hugo博客搭建&#34;&gt;Hugo博客搭建
 &lt;/h2&gt;&lt;h3 id=&#34;下载hugo&#34;&gt;下载Hugo
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Hugo官方网站&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;点我跳转&lt;/a&gt;&lt;/p&gt;
-&lt;img src=&#39;home.png&#39; width=&#39;600px&#39; /&gt;
+&lt;img src=&#39;./img/home.png&#39; width=&#39;600px&#39; /&gt;
 &lt;p&gt;点击导航栏Github跳转到Hugo的Github开源仓库，或者直接&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;点击此处跳转&lt;/a&gt;&lt;/p&gt;
-&lt;img src=&#39;repo.png&#39; width=&#39;600px&#39; /&gt;
+&lt;img src=&#39;./img/repo.png&#39; width=&#39;600px&#39; /&gt;
 &lt;p&gt;点击&lt;code&gt;Tags&lt;/code&gt;选择合适版本后下载对应系统的压缩包，本教程以编写时最新版本0.148.1为例，下载的包名为&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases/download/v0.148.1/hugo_extended_0.148.1_windows-amd64.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hugo_extended_0.148.1_windows-amd64.zip&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;解压后得到如图所示文件&lt;/p&gt;
-&lt;img src=&#39;files.png&#39; width=&#39;600px&#39; /&gt;
+&lt;img src=&#39;./img/files.png&#39; width=&#39;600px&#39; /&gt;
 &lt;p&gt;这样，我们的Hugo就下载好了！&lt;/p&gt;
 &lt;h3 id=&#34;启动hugo&#34;&gt;启动Hugo
 &lt;/h3&gt;&lt;p&gt;在Hugo目录下启动命令提示符/Powershell，执行以下命令&lt;/p&gt;
@@ -38,7 +37,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这会在目录下创建一个文件夹，里面存放了你的博客网站的一些配置与文件，另外，在命令提示符中还出现了让我们感兴趣的步骤，通过这些步骤，我们就可以完成自己的博客页搭建了！&lt;/p&gt;
-&lt;img src=&#39;steps.png&#39; width=&#39;600px&#39; /&gt;
+&lt;img src=&#39;./img/steps.png&#39; width=&#39;600px&#39; /&gt;
 &lt;h3 id=&#34;下载与安装主题&#34;&gt;下载与安装主题
 &lt;/h3&gt;&lt;p&gt;如果你迫不及待的想要看一看自己的网站，我们直接跳到第5步，使用&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -48,15 +47,15 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &amp;lt;Your Folder Name&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;../hugo.exe server --buildDrafts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hugo.exe server --buildDrafts
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;你会看到如下结果&lt;/p&gt;
-&lt;img src=&#39;output.png&#39; width=&#39;600px&#39; /&gt;
+&lt;img src=&#39;./img/output.png&#39; width=&#39;600px&#39; /&gt;
 &lt;p&gt;熟悉前端开发的一定对&lt;code&gt;http://localhost:1313&lt;/code&gt;不陌生，直接在浏览器中打开这个网址就可以看到我们的网站啦！然而，不出意外，我们看到的都是&lt;strong&gt;Page Not Found&lt;/strong&gt; 字样，不要怕，这是是因为我们还没有安装主题！让我们回到第2步。&lt;/p&gt;
 &lt;p&gt;跳转到第二步的网页，或者在Hugo官网导航栏点击Themes。 &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;点此跳转&lt;/a&gt;&lt;/p&gt;
-&lt;img src=&#39;themes.png&#39; width=&#39;600&#39;&gt;
+&lt;img src=&#39;./img/themes.png&#39; width=&#39;600&#39;&gt;
 &lt;p&gt;选择你喜欢的主题进行下载并解压到&lt;code&gt;&amp;lt;Your Folder Name&amp;gt;/themes&lt;/code&gt;下。这里我们使用stack主题为例。&lt;/p&gt;
 &lt;p&gt;接下来，第3步，Hugo要求我们更改&lt;code&gt;hugo.toml&lt;/code&gt;配置文件，在里面添加&lt;code&gt;theme&lt;/code&gt;属性，其值为主题名称（即对应主题的文件夹名称）。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;themes&lt;/code&gt;下我的主题文件夹名为&lt;code&gt;stack&lt;/code&gt;，所以我们在&lt;code&gt;hugo.toml&lt;/code&gt;里添加一行配置。&lt;/p&gt;
@@ -69,7 +68,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;全部完成后，让我们再一次使用第5步，打开我们的网站，就会发现我们的网页有了一些内容！&lt;/p&gt;
-&lt;img src=&#39;page.png&#39; width=&#34;600&#34;&gt;
+&lt;img src=&#39;./img/page.png&#39; width=&#34;600&#34;&gt;
 &lt;h3 id=&#34;写我的第一篇博客&#34;&gt;写我的第一篇博客
 &lt;/h3&gt;&lt;p&gt;我们的网站已经初具雏形，是时候写一篇文章试试手啦！&lt;/p&gt;
 &lt;p&gt;按照第4步，使用如下命令&lt;/p&gt;
@@ -78,13 +77,13 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;../hugo.exe new content &amp;lt;SECTIONNAME&amp;gt;&lt;span class=&#34;se&#34;&gt;\&amp;lt;&lt;/span&gt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hugo.exe new content &amp;lt;SECTIONNAME&amp;gt;&lt;span class=&#34;se&#34;&gt;\&amp;lt;&lt;/span&gt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这里为演示，我创建了&lt;code&gt;post/my-first-post.md&lt;/code&gt;，hugo会在&lt;code&gt;&amp;lt;Your Folder Name&amp;gt;&lt;/code&gt;下建立新的文件，如你所写，我们可以在文件资源管理器中找到并对其做一些修改。&lt;/p&gt;
 &lt;p&gt;最后，让我们再次运行第5步，看一看最终的效果怎么样吧！&lt;/p&gt;
-&lt;img src=&#34;result.png&#34; width=&#34;600&#34;&gt;
-&lt;img src=&#34;result-inner.png&#34; width=&#34;600&#34;&gt;
+&lt;img src=&#34;./img/result.png&#34; width=&#34;600&#34;&gt;
+&lt;img src=&#34;./img/result-inner.png&#34; width=&#34;600&#34;&gt;
 &lt;p&gt;可以看到，我们已经添加了一条新的博客，并且可以阅读其详细内容啦！&lt;/p&gt;
 &lt;h2 id=&#34;主题配置&#34;&gt;主题配置
 &lt;/h2&gt;&lt;p&gt;有些朋友可能会问，为什么我的页面看起来那么草率，一点也不华丽。别急，因为我们没告诉它要长什么样子，它索性就什么也不展示。那要如何告诉主题展示其他的控件呢？还记得我们配置文件嘛，我们需要更改配置文件来告诉主题。我们还是以&lt;code&gt;stack&lt;/code&gt;主题为例。&lt;/p&gt;
@@ -296,20 +295,20 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..&lt;span class=&#34;se&#34;&gt;\h&lt;/span&gt;ugo.exe -D
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.&lt;span class=&#34;se&#34;&gt;\h&lt;/span&gt;ugo.exe -D
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;code&gt;hugo&lt;/code&gt;会自动“编译”当前的所有东西，并将结果输出到&lt;code&gt;public&lt;/code&gt;路径下，我们只需要将该路径下的所有文件上传到Github仓库中，使用其免费的静态界面部署即可。注意：记得更改配置文件中的&lt;code&gt;baseUrl&lt;/code&gt;哦！&lt;/p&gt;
 &lt;p&gt;关于Github的静态网页托管，请参阅&lt;a class=&#34;link&#34; href=&#34;https://pages.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Github Pages&lt;/a&gt;或者跟着接下来的步骤进行简单的操作。&lt;/p&gt;
-&lt;h4 id=&#34;step-1-新建一个仓库&#34;&gt;Step 1 新建一个仓库
-&lt;/h4&gt;&lt;p&gt;登录Github，点击右上角的&lt;code&gt;+&lt;/code&gt;号，选择&lt;code&gt;New repository&lt;/code&gt;
-&lt;img src=&#34;./new-repo.png&#34; width=&#34;600&#34; /&gt;
+&lt;h3 id=&#34;step-1-新建一个仓库&#34;&gt;Step 1 新建一个仓库
+&lt;/h3&gt;&lt;p&gt;登录Github，点击右上角的&lt;code&gt;+&lt;/code&gt;号，选择&lt;code&gt;New repository&lt;/code&gt;
+&lt;img src=&#34;./img/new-repo.png&#34; width=&#34;600&#34; /&gt;
 输入仓库名称，选择&lt;code&gt;Public&lt;/code&gt;，点击&lt;code&gt;Create repository&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Github的每一个账户都有一个站点与无限个项目站点，一般而言，账户名对应的站点为&lt;code&gt;https://&amp;lt;username&amp;gt;.github.io&lt;/code&gt;，项目站点为&lt;code&gt;https://&amp;lt;username&amp;gt;.github.io/&amp;lt;projectname&amp;gt;&lt;/code&gt;。自己的个人博客一般选用账户站点，对应账户站点的仓库名应为&lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt;，输入仓库名，点击&lt;code&gt;Create repository&lt;/code&gt;。看到下面的界面时说明你成功建立了自己的仓库。
-&lt;img src=&#34;./new-repo-success.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
-&lt;h4 id=&#34;step-2-上传文件&#34;&gt;Step 2 上传文件
-&lt;/h4&gt;&lt;p&gt;在仓库页面，点击&lt;code&gt;Upload files&lt;/code&gt;，选择&lt;code&gt;public&lt;/code&gt;路径下的所有文件，点击&lt;code&gt;Add files&lt;/code&gt;，输入文件名，点击&lt;code&gt;Commit changes&lt;/code&gt;。&lt;/p&gt;
+&lt;img src=&#34;./img/new-repo-success.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-2-上传文件&#34;&gt;Step 2 上传文件
+&lt;/h3&gt;&lt;p&gt;在仓库页面，点击&lt;code&gt;Upload files&lt;/code&gt;，选择&lt;code&gt;public&lt;/code&gt;路径下的所有文件，点击&lt;code&gt;Add files&lt;/code&gt;，输入文件名，点击&lt;code&gt;Commit changes&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;如果你使用&lt;code&gt;git&lt;/code&gt;命令工具的话，也可以使用以下命令或者页面提示的命令上传文件：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -327,28 +326,28 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;step-3-配置github-pages&#34;&gt;Step 3 配置Github Pages
-&lt;/h4&gt;&lt;p&gt;在仓库页面，点击&lt;code&gt;Settings&lt;/code&gt;，选择&lt;code&gt;Pages&lt;/code&gt;，&lt;code&gt;Branch&lt;/code&gt;将&lt;code&gt;None&lt;/code&gt;选为&lt;code&gt;main&lt;/code&gt;分支，点击&lt;code&gt;Save&lt;/code&gt;。
-&lt;img src=&#34;./pages.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
-&lt;h4 id=&#34;step-4-查看效果&#34;&gt;Step 4 查看效果
-&lt;/h4&gt;&lt;p&gt;等待一段时间，刷新页面，当看到如下界面时，恭喜你，成功将自己的博客静态界面托管到了Github上，通过&lt;code&gt;Visit Site&lt;/code&gt;即可成功访问啦。
-&lt;img src=&#34;./page-success.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;step-3-配置github-pages&#34;&gt;Step 3 配置Github Pages
+&lt;/h3&gt;&lt;p&gt;在仓库页面，点击&lt;code&gt;Settings&lt;/code&gt;，选择&lt;code&gt;Pages&lt;/code&gt;，&lt;code&gt;Branch&lt;/code&gt;将&lt;code&gt;None&lt;/code&gt;选为&lt;code&gt;main&lt;/code&gt;分支，点击&lt;code&gt;Save&lt;/code&gt;。
+&lt;img src=&#34;./img/pages.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-4-查看效果&#34;&gt;Step 4 查看效果
+&lt;/h3&gt;&lt;p&gt;等待一段时间，刷新页面，当看到如下界面时，恭喜你，成功将自己的博客静态界面托管到了Github上，通过&lt;code&gt;Visit Site&lt;/code&gt;即可成功访问啦。
+&lt;img src=&#34;./img/page-success.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;github自动部署&#34;&gt;Github自动部署
 &lt;/h2&gt;&lt;p&gt;现在我们已经初步有了自己的个人博客网站啦！但是每次进行修改后，都需要手动进行“编译”和上传，这是一个比较繁琐的过程。有没有什么办法可以自动进行编译和上传呢？答案是肯定的！我们可以使用&lt;code&gt;Github Actions&lt;/code&gt;来实现。&lt;/p&gt;
 &lt;p&gt;通过下面的步骤，我们可以实现自动编译和上传。&lt;/p&gt;
-&lt;h4 id=&#34;step-1-创建新的-github-仓库&#34;&gt;Step 1 创建新的 Github 仓库
-&lt;/h4&gt;&lt;p&gt;首先，我们需要再次创建一个新的仓库，用于存放我们的主文件。&lt;/p&gt;
-&lt;h4 id=&#34;step-2-设置-github-actions&#34;&gt;Step 2 设置 Github Actions
-&lt;/h4&gt;&lt;p&gt;创建完后，先不着急上传文件。&lt;/p&gt;
+&lt;h3 id=&#34;step-1-创建新的-github-仓库&#34;&gt;Step 1 创建新的 Github 仓库
+&lt;/h3&gt;&lt;p&gt;首先，我们需要再次创建一个新的仓库，用于存放我们的主文件。&lt;/p&gt;
+&lt;h3 id=&#34;step-2-设置-github-actions&#34;&gt;Step 2 设置 Github Actions
+&lt;/h3&gt;&lt;p&gt;创建完后，先不着急上传文件。&lt;/p&gt;
 &lt;p&gt;在Github个人的&lt;code&gt;Settings -&amp;gt; Developer Settings -&amp;gt; Personal access tokens&lt;/code&gt;中点击&lt;code&gt;Generate new token&lt;/code&gt;创建一个新的token(classic)，注意保存好该token，后续会使用到。
-&lt;img src=&#34;./developer-settings.png&#34; width=&#34;600&#34; /&gt;
-&lt;img src=&#34;./generate-new-token.png&#34; width=&#34;600&#34; /&gt;
+&lt;img src=&#34;./img/developer-settings.png&#34; width=&#34;600&#34; /&gt;
+&lt;img src=&#34;./img/generate-new-token.png&#34; width=&#34;600&#34; /&gt;
 token选择永不过期，并勾选 repo 和 workflow 选项。
-&lt;img src=&#34;./createToken2.png&#34; width=&#34;600&#34; /&gt;
+&lt;img src=&#34;./img/createToken2.png&#34; width=&#34;600&#34; /&gt;
 注意，生成的Token只能查看一次，请注意将其复制保存到合适的位置！&lt;/p&gt;
 &lt;p&gt;之后在，刚刚创建的新仓库中，进入仓库的&lt;code&gt;Settings -&amp;gt; Secrets and variables -&amp;gt; Actions&lt;/code&gt;，点击&lt;code&gt;New repository secret&lt;/code&gt;，命名秘密变量名名称以及其值。&lt;/p&gt;
-&lt;h4 id=&#34;step-3-创建工作流&#34;&gt;Step 3 创建工作流
-&lt;/h4&gt;&lt;p&gt;在&lt;code&gt;&amp;lt;Your Folder Name&amp;gt;&lt;/code&gt;路径下创建一个&lt;code&gt;.github/workflows&lt;/code&gt;目录，在该目录下创建一个&lt;code&gt;hugo.yml&lt;/code&gt;文件，内容如下：&lt;/p&gt;
+&lt;h3 id=&#34;step-3-创建工作流&#34;&gt;Step 3 创建工作流
+&lt;/h3&gt;&lt;p&gt;在&lt;code&gt;&amp;lt;Your Folder Name&amp;gt;&lt;/code&gt;路径下创建一个&lt;code&gt;.github/workflows&lt;/code&gt;目录，在该目录下创建一个&lt;code&gt;hugo.yml&lt;/code&gt;文件，内容如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -419,15 +418,15 @@ token选择永不过期，并勾选 repo 和 workflow 选项。
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PERSONAL_TOKEN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.你的token变量名 }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;EXTERNAL_REPOSITORY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;你的github名/你的仓库名&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PUBLISH_BRANCH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PUBLISH_DIR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PUBLISH_DIR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./img/public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;commit_message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;auto deploy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;注意更改&lt;code&gt;PERSONAL_TOKEN&lt;/code&gt;为你刚刚创建的token变量名以及&lt;code&gt;EXTERNAL_REPOSITORY&lt;/code&gt;为你的仓库名称。&lt;/p&gt;
 &lt;p&gt;我们暂时不需要了解这做了什么。如果你感兴趣，欢迎参阅&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;【Github Actions】&lt;/a&gt;。&lt;/p&gt;
-&lt;h4 id=&#34;step-4-上传文件&#34;&gt;Step 4 上传文件
-&lt;/h4&gt;&lt;p&gt;在正式上传文件之前，我们需要在&lt;code&gt;&amp;lt;Your Folder Name&amp;gt;&lt;/code&gt;下新建一个&lt;code&gt;.gitignore&lt;/code&gt;文件，避免上传一些不必要的文件。&lt;/p&gt;
+&lt;h3 id=&#34;step-4-上传文件&#34;&gt;Step 4 上传文件
+&lt;/h3&gt;&lt;p&gt;在正式上传文件之前，我们需要在&lt;code&gt;&amp;lt;Your Folder Name&amp;gt;&lt;/code&gt;下新建一个&lt;code&gt;.gitignore&lt;/code&gt;文件，避免上传一些不必要的文件。&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;.gitignore&lt;/code&gt;文件中，添加以下内容：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

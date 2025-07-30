@@ -6,7 +6,16 @@
         <description>Recent content in Categories on 超超的博客站</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>超超-Jackson</copyright><atom:link href="https://jzcse.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>超超-Jackson</copyright>
+        <lastBuildDate>Wed, 30 Jul 2025 14:15:41 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>教程</title>
+        <link>https://jzcse.github.io/categories/%E6%95%99%E7%A8%8B/</link>
+        <pubDate>Wed, 23 Jul 2025 15:39:39 +0800</pubDate>
+        
+        <guid>https://jzcse.github.io/categories/%E6%95%99%E7%A8%8B/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Test</title>
         <link>https://jzcse.github.io/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
