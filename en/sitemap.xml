@@ -2,45 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jzcse.github.io/en/</loc>
-    <lastmod>2025-07-23T12:55:50+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://jzcse.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jzcse.github.io/en/"
-                />
-  </url><url>
-    <loc>https://jzcse.github.io/en/p/my-first-post/</loc>
-    <lastmod>2025-07-23T12:55:50+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://jzcse.github.io/p/my-first-post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jzcse.github.io/en/p/my-first-post/"
-                />
-  </url><url>
-    <loc>https://jzcse.github.io/en/post/</loc>
-    <lastmod>2025-07-23T12:55:50+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://jzcse.github.io/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jzcse.github.io/en/post/"
-                />
-  </url><url>
     <loc>https://jzcse.github.io/en/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -52,6 +13,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://jzcse.github.io/en/archives/"
+                />
+  </url><url>
+    <loc>https://jzcse.github.io/en/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jzcse.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jzcse.github.io/en/"
                 />
   </url><url>
     <loc>https://jzcse.github.io/en/page/</loc>

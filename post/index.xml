@@ -448,16 +448,6 @@ token选择永不过期，并勾选 repo 和 workflow 选项。
 &lt;p&gt;通过上面的步骤，恭喜你，拥有了完全属于自己的个人博客页，接下来尽情发挥你的创意，享受无限可能吧！&lt;/p&gt;
 </description>
         </item>
-        <item>
-        <title>My First Post</title>
-        <link>https://jzcse.github.io/p/my-first-post/</link>
-        <pubDate>Wed, 23 Jul 2025 12:55:50 +0800</pubDate>
-        
-        <guid>https://jzcse.github.io/p/my-first-post/</guid>
-        <description>&lt;h1 id=&#34;my-first-post&#34;&gt;My First Post！
-&lt;/h1&gt;&lt;h2 id=&#34;hello-worldhello-hugo&#34;&gt;Hello World！Hello Hugo!
-&lt;/h2&gt;</description>
-        </item>
         
     </channel>
 </rss>
