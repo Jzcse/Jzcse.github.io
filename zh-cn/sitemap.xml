@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jzcse.github.io/post/</loc>
+    <lastmod>2025-09-15T23:02:24+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/p/pytorch-env/</loc>
+    <lastmod>2025-09-15T23:02:24+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/p/dungeon-game-with-phaser/</loc>
+    <lastmod>2025-09-15T23:02:24+08:00</lastmod>
+  </url><url>
     <loc>https://jzcse.github.io/p/%E6%95%99%E7%A8%8Bnonebot--lagrange-%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84qq%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
     <lastmod>2025-08-01T19:03:14+08:00</lastmod>
   </url><url>
@@ -22,9 +31,6 @@
     <lastmod>2025-08-01T19:03:14+08:00</lastmod>
   </url><url>
     <loc>https://jzcse.github.io/tags/nonebot/</loc>
-    <lastmod>2025-08-01T19:03:14+08:00</lastmod>
-  </url><url>
-    <loc>https://jzcse.github.io/post/</loc>
     <lastmod>2025-08-01T19:03:14+08:00</lastmod>
   </url><url>
     <loc>https://jzcse.github.io/tags/</loc>
