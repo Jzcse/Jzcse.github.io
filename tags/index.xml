@@ -7,7 +7,39 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>超超-Jackson</copyright>
-        <lastBuildDate>Fri, 01 Aug 2025 19:03:14 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 15 Sep 2025 23:09:24 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Anaconda</title>
+        <link>https://jzcse.github.io/tags/anaconda/</link>
+        <pubDate>Mon, 15 Sep 2025 21:44:11 +0800</pubDate>
+        
+        <guid>https://jzcse.github.io/tags/anaconda/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CUDA</title>
+        <link>https://jzcse.github.io/tags/cuda/</link>
+        <pubDate>Mon, 15 Sep 2025 21:44:11 +0800</pubDate>
+        
+        <guid>https://jzcse.github.io/tags/cuda/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://jzcse.github.io/tags/python/</link>
+        <pubDate>Mon, 15 Sep 2025 21:44:11 +0800</pubDate>
+        
+        <guid>https://jzcse.github.io/tags/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PyTorch</title>
+        <link>https://jzcse.github.io/tags/pytorch/</link>
+        <pubDate>Mon, 15 Sep 2025 21:44:11 +0800</pubDate>
+        
+        <guid>https://jzcse.github.io/tags/pytorch/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Lagrange</title>
         <link>https://jzcse.github.io/tags/lagrange/</link>
         <pubDate>Fri, 01 Aug 2025 17:29:13 +0800</pubDate>

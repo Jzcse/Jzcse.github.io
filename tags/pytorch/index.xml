@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PyTorch on 超超的博客站</title>
+        <link>https://jzcse.github.io/tags/pytorch/</link>
+        <description>Recent content in PyTorch on 超超的博客站</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>超超-Jackson</copyright>
+        <lastBuildDate>Mon, 15 Sep 2025 23:09:24 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【教程】从零开始搭建pytorh环境</title>
+        <link>https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorh%E7%8E%AF%E5%A2%83/</link>
+        <pubDate>Mon, 15 Sep 2025 21:44:11 +0800</pubDate>
+        
+        <guid>https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorh%E7%8E%AF%E5%A2%83/</guid>
+        <description>&lt;img src="https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorh%E7%8E%AF%E5%A2%83/img/cover.png" alt="Featured image of post 【教程】从零开始搭建pytorh环境" /&gt;&lt;h1 id=&#34;从零开始搭建pytorch环境&#34;&gt;从零开始搭建pytorch环境
+&lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;在最近的人工智能课程上，我完成了从零搭建人工智能运行环境以及测试的相关流程，已经写完了实验报告，但是因为教师要求将自己的思考过程写在报告里，直接将报告的内容搬过来并不是一个好的选择，于是我决定重新写这一篇文章，力求用最简单、清晰的流程让你完成环境的搭建。&lt;/p&gt;
+&lt;h2 id=&#34;总览&#34;&gt;总览
+&lt;/h2&gt;&lt;p&gt;本教程包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;显卡驱动的安装&lt;/li&gt;
+&lt;li&gt;CUDA的安装&lt;/li&gt;
+&lt;li&gt;Anaconda的安装及部分教程&lt;/li&gt;
+&lt;li&gt;pytorch的安装&lt;/li&gt;
+&lt;li&gt;pytorch的测试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;适用与想在Windows操作环境下使用显卡训练pytorch相关模型的学生。&lt;/p&gt;
+&lt;p&gt;Windows环境下的操作都相对简单，所以不要担心。&lt;/p&gt;
+&lt;p&gt;本人刚刚进行人工智能相关的学习，如有错误，还望指出。&lt;/p&gt;
+&lt;h2 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装
+&lt;/h2&gt;&lt;p&gt;这里主要针对N卡的显卡驱动，其他显卡驱动请查看其他文章。
+一般来说，电脑是自带有英伟达显卡驱动的，可以通过在命令提示框运行以下命令来查看是否已经安装显卡驱动。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvidia-smi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果已经正确安装英伟达驱动，你将看到以下界面。
+&lt;img src=&#34;./img/nvidia.png&#34; style=&#34;margin: auto;&#34;&gt;
+如果没有，请自行前往英伟达官网或英伟达 App下载与安装对应版本的显卡驱动，知直到出现上述图片内容。&lt;/p&gt;
+&lt;h2 id=&#34;cuda的安装&#34;&gt;CUDA的安装
+&lt;/h2&gt;&lt;h3 id=&#34;什么是cuda&#34;&gt;什么是CUDA
+&lt;/h3&gt;&lt;p&gt;在正式安装CUDA之前，我们先来介绍一下什么CUDA。
+CUDA(Compute Unified Device Architecture，计算统一设备架构)，是Nvidia开发的并行计算平台和编程模型，核心作用是让开发者能够利用Nvidia GPU的并行计算能力。在pytorch中，CUDA可以帮助pytorch调用GPU加速矩阵运算，所以是我们接下来运行pytorch项目的关键工具。&lt;/p&gt;
+&lt;h3 id=&#34;安装cuda&#34;&gt;安装CUDA
+&lt;/h3&gt;&lt;p&gt;首先，根据刚才使用的&lt;code&gt;nvidia-smi&lt;/code&gt;获得的信息，我们需要知道当前显卡驱动能支持的&lt;strong&gt;最高&lt;/strong&gt;版本的CUDA，根据刚才的图片，可以知道，我的显卡驱动最高支持到13.0版本。&lt;/p&gt;
+&lt;p&gt;我们在这里只需要记住这个版本号即可，我不会让你们前往Nvidia挂网下载对应版本的CUDA工具包，关于原因，相信你在下文中会清楚的。&lt;/p&gt;
+&lt;h2 id=&#34;anaconda的安装&#34;&gt;Anaconda的安装
+&lt;/h2&gt;&lt;h3 id=&#34;什么是anaconda&#34;&gt;什么是Anaconda
+&lt;/h3&gt;&lt;p&gt;准确来说，Anaconda是一个工具包，其包含Conda，Anaconda Navigator与一些常用的数据科学库。&lt;/p&gt;
+&lt;p&gt;Conda，是一个环境与包管理工具，类似于npm与pip，它可以管理当前项目所需要的包/依赖，而Conda比pip更高级的地方是，它可以通过虚拟环境管理更多版本的Python解释器！真正让我们能够一个项目对应一个解释器与依赖。&lt;/p&gt;
+&lt;p&gt;这里不再解释什么是虚拟环境，为什么要有虚拟环境，网上的解释或如今的AI能够解决我们的大部分问题。&lt;/p&gt;
+&lt;p&gt;当然如果你仅仅是想要稍微尝试一下torch，你当然可以不安装Anaconda而仅仅使用全局环境下的python解释器，当然我不推荐你这么做。&lt;/p&gt;
+&lt;p&gt;Anaconda Navigator，为初识Conda的学习者提供了图形化界面，它能帮助我们创建、管理虚拟环境，打开对应IDE等等。&lt;/p&gt;
+&lt;h3 id=&#34;安装anaconda&#34;&gt;安装Anaconda
+&lt;/h3&gt;&lt;p&gt;对Windows环境，我们直接前往&lt;a class=&#34;link&#34; href=&#34;https://www.anaconda.com/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anaconda官网&lt;/a&gt;，界面如下图。&lt;/p&gt;
+&lt;img src=&#34;./img/anaconda-download.png&#34;&gt;
+&lt;p&gt;点击&amp;quot;Get Started&amp;quot;注册并登录后就可以进入下载页了，选择Windows版本进行下载。&lt;/p&gt;
+&lt;img src=&#39;./img/anaconda-download-2.png&#39;&gt;
+&lt;p&gt;当然如果你不想登录，在地址栏后面添加&amp;quot;/success&amp;quot;就可以跳过验证(doge)。&lt;/p&gt;
+&lt;p&gt;接下来按照指引完成安装即可，需要注意的是，Anaconda已经不推荐将其添加到环境变量了，我们听取它的建议。&lt;/p&gt;
+&lt;p&gt;安装好后，你在开始菜单下，应该可以看见这样的几个程序，如图。&lt;/p&gt;
+&lt;img src=&#34;./img/prompt.png&#34;&gt;
+&lt;p&gt;这样就说明我们已经安装好了。&lt;/p&gt;
+&lt;h3 id=&#34;anaconda基础教程&#34;&gt;Anaconda基础教程
+&lt;/h3&gt;&lt;p&gt;打开&lt;code&gt;Anaconda PowerShell Prompt&lt;/code&gt;或者&lt;code&gt;Anaconda Prompt&lt;/code&gt;，Anaconda将自动为你启用基虚拟环境，即在路径前可以看到&lt;code&gt;(base)&lt;/code&gt;字样。该虚拟环境自带&lt;code&gt;python 3.13&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;为了以后方便，我们创建一个新的虚拟环境。使用下面的命令创建新的环境。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create -n &amp;lt;env-name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;使用下面的命令激活/切换到其他虚拟环境.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate &amp;lt;env-name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在上述命令执行成功后，你应该可以看到&lt;code&gt;(base)&lt;/code&gt;变成了&lt;code&gt;(&amp;lt;env-name&amp;gt;)&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;使用下面的命令关闭当前虚拟环境。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda deactivate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;conda会自动切换回&lt;code&gt;base&lt;/code&gt;虚拟环境。&lt;/p&gt;
+&lt;p&gt;你也可以使用下面的命令查看当前已经创建了哪些虚拟环境。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda env list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;效果如图。&lt;/p&gt;
+&lt;img src=&#34;./img/env.png&#34;&gt;
+&lt;p&gt;当然，你完全可以使用&lt;code&gt;Anaconda Navigator&lt;/code&gt;的图形化界面！&lt;/p&gt;
+&lt;h2 id=&#34;下载python&#34;&gt;下载Python
+&lt;/h2&gt;&lt;p&gt;我们假设你已经创建好了一个虚拟环境，这里我用&lt;code&gt;temp&lt;/code&gt;统称。&lt;/p&gt;
+&lt;p&gt;现在，我们激活到&lt;code&gt;temp&lt;/code&gt;环境下，输入以下命令安装python。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.12
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这里我们下载3.12版本的python，其他版本的应该也可以，为了不必要的麻烦，还请跟着3.12做一遍。&lt;/p&gt;
+&lt;p&gt;安装好后，运行以下命令检查是否安装成功。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果成功返回python版本号，说明已经安装成功啦！&lt;/p&gt;
+&lt;p&gt;使用以下命令查看当前环境下已经下载了哪些东西。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;安装torch&#34;&gt;安装torch
+&lt;/h2&gt;&lt;p&gt;前面说到，我没有让你们下载单独CUDA，因为当前的torch包中已经预编译了相应的CUDA，就算我们安装了CUDA，torch也不会使用我们单独安装的CUDA，不如不装，但是，我希望你们能够了解CUDA在这里面的作用。&lt;/p&gt;
+&lt;p&gt;如果你使用以下命令，那么pip会帮你安装仅支持CPU运行的torch的包，这里列出，不推荐。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install torch torchvision
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们下载支持CUDA（已经预编译CUDA，支持GPU运行）的torch包。
+前往&lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/get-started/locally/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;torch官网下载页&lt;/a&gt;，选择适合您机器的版本，复制下面的命令键入到命令行中执行即可。&lt;/p&gt;
+&lt;img src=&#34;./img/torch-install.png&#34;&gt;
+&lt;p&gt;推荐pip，如果您的显卡驱动不支持表中的CUDA版本，建议安装更高版本的显卡驱动，虽然你也可以安装&lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/get-started/previous-versions/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;torch更早的版本&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;检测是否可用&#34;&gt;检测是否可用
+&lt;/h2&gt;&lt;p&gt;在命令行中键入以下命令查看当前python已经下载哪些包。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;你将看到&lt;code&gt;torch&lt;/code&gt;与&lt;code&gt;torchvision&lt;/code&gt;在列表中。&lt;/p&gt;
+&lt;p&gt;接下来，启动python的命令行模式。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;依次执行。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import torch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;torch.cuda.is_available&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果返回的结果是&lt;code&gt;True&lt;/code&gt;的话，恭喜你，你已经完成了torch的安装，不然，请您检查前面的步骤。&lt;/p&gt;
+&lt;h2 id=&#34;运行torch的示例代码&#34;&gt;运行torch的示例代码
+&lt;/h2&gt;&lt;p&gt;这里假设您会使用git命令以及知道如何使用虚拟环境下的python执行python文件。&lt;/p&gt;
+&lt;p&gt;项目地址为&lt;a class=&#34;link&#34; href=&#34;https://github.com/gangeqian/cnn_example&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cnn_example&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;这里提醒一下，请按照项目的README顺序执行代码。&lt;/p&gt;
+&lt;p&gt;另外，项目中的部分语法与现在的有些不同，如果你没有python基础，看到报错信息后可以将报错信息复制给AI，按照AI的修改建议修改代码即可。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

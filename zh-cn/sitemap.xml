@@ -2,20 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jzcse.github.io/post/</loc>
-    <lastmod>2025-09-15T23:02:24+08:00</lastmod>
+    <loc>https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorh%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2025-09-15T23:09:24+08:00</lastmod>
   </url><url>
-    <loc>https://jzcse.github.io/p/pytorch-env/</loc>
-    <lastmod>2025-09-15T23:02:24+08:00</lastmod>
-  </url><url>
-    <loc>https://jzcse.github.io/p/dungeon-game-with-phaser/</loc>
-    <lastmod>2025-09-15T23:02:24+08:00</lastmod>
-  </url><url>
-    <loc>https://jzcse.github.io/p/%E6%95%99%E7%A8%8Bnonebot--lagrange-%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84qq%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
-    <lastmod>2025-08-01T19:03:14+08:00</lastmod>
+    <loc>https://jzcse.github.io/tags/anaconda/</loc>
+    <lastmod>2025-09-15T23:09:24+08:00</lastmod>
   </url><url>
     <loc>https://jzcse.github.io/categories/</loc>
-    <lastmod>2025-08-01T19:03:14+08:00</lastmod>
+    <lastmod>2025-09-15T23:09:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -27,14 +21,20 @@
                 href="https://jzcse.github.io/categories/"
                 />
   </url><url>
-    <loc>https://jzcse.github.io/tags/lagrange/</loc>
-    <lastmod>2025-08-01T19:03:14+08:00</lastmod>
+    <loc>https://jzcse.github.io/tags/cuda/</loc>
+    <lastmod>2025-09-15T23:09:24+08:00</lastmod>
   </url><url>
-    <loc>https://jzcse.github.io/tags/nonebot/</loc>
-    <lastmod>2025-08-01T19:03:14+08:00</lastmod>
+    <loc>https://jzcse.github.io/post/</loc>
+    <lastmod>2025-09-15T23:09:24+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/tags/python/</loc>
+    <lastmod>2025-09-15T23:09:24+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/tags/pytorch/</loc>
+    <lastmod>2025-09-15T23:09:24+08:00</lastmod>
   </url><url>
     <loc>https://jzcse.github.io/tags/</loc>
-    <lastmod>2025-08-01T19:03:14+08:00</lastmod>
+    <lastmod>2025-09-15T23:09:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -47,6 +47,15 @@
                 />
   </url><url>
     <loc>https://jzcse.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-09-15T23:09:24+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/p/%E6%95%99%E7%A8%8Bnonebot--lagrange-%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84qq%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
+    <lastmod>2025-08-01T19:03:14+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/tags/lagrange/</loc>
+    <lastmod>2025-08-01T19:03:14+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/tags/nonebot/</loc>
     <lastmod>2025-08-01T19:03:14+08:00</lastmod>
   </url><url>
     <loc>https://jzcse.github.io/p/%E6%95%99%E7%A8%8Bhugo--github%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
