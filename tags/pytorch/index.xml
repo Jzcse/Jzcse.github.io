@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>超超-Jackson</copyright>
-        <lastBuildDate>Mon, 15 Sep 2025 23:09:24 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>【教程】从零开始搭建pytorh环境</title>
-        <link>https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorh%E7%8E%AF%E5%A2%83/</link>
+        <lastBuildDate>Mon, 15 Sep 2025 23:10:51 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【教程】从零开始搭建pytorch环境</title>
+        <link>https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorch%E7%8E%AF%E5%A2%83/</link>
         <pubDate>Mon, 15 Sep 2025 21:44:11 +0800</pubDate>
         
-        <guid>https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorh%E7%8E%AF%E5%A2%83/</guid>
-        <description>&lt;img src="https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorh%E7%8E%AF%E5%A2%83/img/cover.png" alt="Featured image of post 【教程】从零开始搭建pytorh环境" /&gt;&lt;h1 id=&#34;从零开始搭建pytorch环境&#34;&gt;从零开始搭建pytorch环境
+        <guid>https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorch%E7%8E%AF%E5%A2%83/</guid>
+        <description>&lt;img src="https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorch%E7%8E%AF%E5%A2%83/img/cover.png" alt="Featured image of post 【教程】从零开始搭建pytorch环境" /&gt;&lt;h1 id=&#34;从零开始搭建pytorch环境&#34;&gt;从零开始搭建pytorch环境
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在最近的人工智能课程上，我完成了从零搭建人工智能运行环境以及测试的相关流程，已经写完了实验报告，但是因为教师要求将自己的思考过程写在报告里，直接将报告的内容搬过来并不是一个好的选择，于是我决定重新写这一篇文章，力求用最简单、清晰的流程让你完成环境的搭建。&lt;/p&gt;
 &lt;h2 id=&#34;总览&#34;&gt;总览
