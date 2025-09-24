@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Machine Learning on 超超的博客站</title>
+        <link>https://jzcse.github.io/tags/machine-learning/</link>
+        <description>Recent content in Machine Learning on 超超的博客站</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>超超-Jackson</copyright>
+        <lastBuildDate>Wed, 24 Sep 2025 13:34:33 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【笔记】Bayesian decision</title>
+        <link>https://jzcse.github.io/p/%E7%AC%94%E8%AE%B0bayesian-decision/</link>
+        <pubDate>Wed, 24 Sep 2025 07:58:35 +0800</pubDate>
+        
+        <guid>https://jzcse.github.io/p/%E7%AC%94%E8%AE%B0bayesian-decision/</guid>
+        <description>&lt;h1 id=&#34;机器学习中的贝叶斯决策&#34;&gt;机器学习中的贝叶斯决策
+&lt;/h1&gt;&lt;h2 id=&#34;朴素贝叶斯决策&#34;&gt;朴素贝叶斯决策
+&lt;/h2&gt;&lt;h3 id=&#34;概念&#34;&gt;概念
+&lt;/h3&gt;&lt;p&gt;对于分类器，首先我们需要让机器学习如何分类。在此之前，总得先有&lt;strong&gt;类别&lt;/strong&gt;。将用作机器学习分类的数据称作样本，首先将需要学习的样本进行分类，记作$\omega_i$，对其中每一类占总样本空间的比例，称为&lt;strong&gt;先验概率&lt;/strong&gt;，记作$P(\omega_i)$，显然我们有
+&lt;/p&gt;
+$$\sum_{i=1}^nP(\omega_i)=1$$&lt;p&gt;
+然后我们需要选定一个对象的&lt;strong&gt;特征&lt;/strong&gt;，用变量$x$表示，对于每一类别下的每一个个体，其都会有一个特征，但是这个特征值可能不同，我们可以通过特征值的不同，对不同个体进行分类。但是，不同的类别下的个体的特征值可能相同，这又该怎么办呢？
+我们引入&lt;strong&gt;似然概率&lt;/strong&gt;，记作$P(x|\omega_i)$，表示在类$\omega_i$中，特征值$x$的发生概率，不难得到
+&lt;/p&gt;
+$$P(x|\omega_i)=\frac{P(x, \omega_i)}{P(\omega_i)}$$&lt;p&gt;
+我们关心的是在观测到特征值$x$后判断其属于某一类的可能性，所以我们更关心的是$P(\omega_i|x)$，不难得出
+&lt;/p&gt;
+$$P(\omega_i|x)=\frac{P(x, \omega_i)}{P(x)}=\frac{P(x|\omega_i)P(\omega_i)}{P(x)}$$&lt;p&gt;
+其中
+&lt;/p&gt;
+$$P(x)=\sum_{i=1}^nP(x|\omega_i)P(\omega_i)$$&lt;p&gt;
+这样，当我们观测到特征值$x$出现时，就可以通过训练样本中得出的特征值$x$属于某个类的概率来决定将此个体分为哪一类了。&lt;/p&gt;
+&lt;h3 id=&#34;举例&#34;&gt;举例
+&lt;/h3&gt;&lt;p&gt;我们现在要做一个二分类器来区分猫与狗，选定的特征为猫与狗的体长。
+那么我们就可以知道$\omega_1=cat, \omega_2=dog$，同时$x$表示体长（这里将体长分为不同的等级，取离散值$x$）。&lt;/p&gt;
+&lt;p&gt;经过对样本的观察得到如下结果。&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;特征值&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;猫&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;狗&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;2&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;现在假设我们（机器）观测到了特征值$x$=2的个体，但是样本下既可以是猫，也可以是狗，就需要使用贝叶斯朴素判别法来进行判断。
+显然，我们有
+&lt;/p&gt;
+$$P(\omega_1|x)=\frac{P(\omega_1, x)}{P(x)}=\frac{P(x|\omega_1)P(\omega_1)}{P(x|\omega_1)P(\omega_1)+P(x|\omega_2)P(\omega_2)}$$&lt;p&gt;其中，我们不难得到&lt;/p&gt;
+$$P(x|\omega_1)=\frac{1}{2}$$&lt;p&gt;
+&lt;/p&gt;
+$$P(x|\omega_2)=\frac{1}{5}$$&lt;p&gt;
+&lt;/p&gt;
+$$P(\omega_1)=\frac{4}{9}$$&lt;p&gt;
+&lt;/p&gt;
+$$P(\omega_2)=\frac{5}{9}$$&lt;p&gt;所以有&lt;/p&gt;
+$$P(\omega_1|x)=\frac{2}{9}$$&lt;p&gt;
+&lt;/p&gt;
+$$P(\omega_2|x)=\frac{1}{9}$$&lt;p&gt;
+从而，机器做出决定，特征值$x=2$的个体有更大的概率是猫，所以它会做出猫的分类。当然，这里仅仅是举个例子，实际上的判断是经过多种特征综合分析得出的结果，更为复杂。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

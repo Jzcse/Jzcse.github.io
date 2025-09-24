@@ -2,14 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorch%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
-  </url><url>
-    <loc>https://jzcse.github.io/tags/anaconda/</loc>
-    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
+    <loc>https://jzcse.github.io/p/%E7%AC%94%E8%AE%B0bayesian-decision/</loc>
+    <lastmod>2025-09-24T13:34:33+08:00</lastmod>
   </url><url>
     <loc>https://jzcse.github.io/categories/</loc>
-    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
+    <lastmod>2025-09-24T13:34:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -21,20 +18,14 @@
                 href="https://jzcse.github.io/categories/"
                 />
   </url><url>
-    <loc>https://jzcse.github.io/tags/cuda/</loc>
-    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
+    <loc>https://jzcse.github.io/tags/machine-learning/</loc>
+    <lastmod>2025-09-24T13:34:33+08:00</lastmod>
   </url><url>
     <loc>https://jzcse.github.io/post/</loc>
-    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
-  </url><url>
-    <loc>https://jzcse.github.io/tags/python/</loc>
-    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
-  </url><url>
-    <loc>https://jzcse.github.io/tags/pytorch/</loc>
-    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
+    <lastmod>2025-09-24T13:34:33+08:00</lastmod>
   </url><url>
     <loc>https://jzcse.github.io/tags/</loc>
-    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
+    <lastmod>2025-09-24T13:34:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -45,6 +36,27 @@
                 hreflang="zh-cn"
                 href="https://jzcse.github.io/tags/"
                 />
+  </url><url>
+    <loc>https://jzcse.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2025-09-24T13:34:33+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/p/chapter-three/</loc>
+    <lastmod>2025-09-24T13:34:33+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/p/%E6%95%99%E7%A8%8B%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BApytorch%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/tags/anaconda/</loc>
+    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/tags/cuda/</loc>
+    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/tags/python/</loc>
+    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://jzcse.github.io/tags/pytorch/</loc>
+    <lastmod>2025-09-15T23:10:51+08:00</lastmod>
   </url><url>
     <loc>https://jzcse.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-09-15T23:10:51+08:00</lastmod>

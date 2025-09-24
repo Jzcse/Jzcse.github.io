@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>超超-Jackson</copyright>
-        <lastBuildDate>Mon, 15 Sep 2025 23:10:51 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 24 Sep 2025 13:34:33 +0800</lastBuildDate><atom:link href="https://jzcse.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Machine Learning</title>
+        <link>https://jzcse.github.io/tags/machine-learning/</link>
+        <pubDate>Wed, 24 Sep 2025 07:58:35 +0800</pubDate>
+        
+        <guid>https://jzcse.github.io/tags/machine-learning/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Anaconda</title>
         <link>https://jzcse.github.io/tags/anaconda/</link>
         <pubDate>Mon, 15 Sep 2025 21:44:11 +0800</pubDate>
